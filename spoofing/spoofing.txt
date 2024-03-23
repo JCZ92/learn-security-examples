@@ -7,3 +7,7 @@ countermeasure: set httpOnly to true, cookie can only be accessed by http reques
 
 vulnerability 3: CSRF
 sameSite set as true: mitigate cross-site request forgery attacks by only allowing requests from the same site.
+
+CIA violation:
+Confidentiality: session id may be stolen
+possible Integrity violation: CSRF may be used to corrupt user data

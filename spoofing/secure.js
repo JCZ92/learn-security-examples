@@ -8,10 +8,10 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use(
   session({
-    secret: `${secret}`,
+    secret: `${secret}`, // secret is not fixed
     cookie: {
-        httpOnly: true,
-        sameSite: true,
+        httpOnly: true, // set to true, cannot read cookie by program
+        sameSite: true, // no cross origin allowed 
     },
     resave: false,
     saveUninitialized: false

@@ -1,0 +1,7 @@
+vulnerability 1: name value is from user request without sanitization. This could be exploited by malicious scripts or the 
+the user can inject some links or scripts directly.
+countermeasure: use input sanitization method
+
+CIA violation:
+Integrity: the html can be tampered with malicious information.
+

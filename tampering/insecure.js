@@ -31,7 +31,7 @@ app.post("/sensitive", (req, res) => {
 app.get("/", (req, res) => {
   let name = "Guest"
 
-  if (req.session.user) name = req.session.user
+  if (req.session.user) name = req.session.user // name is from user input, can be injected with codes or links
 
   res.send(`
   <h1>Welcome, ${name}</h1>

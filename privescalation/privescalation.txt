@@ -1,1 +1,7 @@
-two factor authentication - session id and token
+- Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+In the insecure version, any user can impersonate the admin and escalate his privilege. In the secure version,
+the user is authenciated first and verify the user's id to make sure it is a legitimate operation. 
+
+- What additional security mechanisms can you incorporate to prevent such attacks?
+We can implement two factor authentication - session id and token.
+We can expose sensitive access to only granted users, preventing other user to access the sensitive services.

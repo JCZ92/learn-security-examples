@@ -1,3 +1,10 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
-Which CIA property does tampering violate?
+vulnerability: the user can abuse the query function and inject some NOSQL and steal the data of other users.
+The secure version first examines whether the query parameters are string, otherwise will reject the query.
+At the same time, it will sanitize the username from userinput to prevent NOSQL injection.
+Which CIA property does information disclosure violate?
+Confidentiality is directly compromised due to unintended informatin disclosure. The attacker can access other users' sensitive data.
+
 What additional security mechanisms can you incorporate?
+Strong authentication mechanism, checking unnecessary log, not sending the creditials without encryption - by bcrypt
+

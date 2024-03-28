@@ -10,8 +10,8 @@ app.use(
   session({
     secret: `${secret}`, // secret is not fixed
     cookie: {
-        httpOnly: true, // set to true, cannot read cookie by program
-        sameSite: true, // no cross origin allowed 
+        httpOnly: true, // set to true, cannot read cookie by client side scripting, only allowed by the server side
+        sameSite: true, // no cross site requests allowed 
     },
     resave: false,
     saveUninitialized: false

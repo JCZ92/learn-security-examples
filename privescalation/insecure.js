@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 
 // Route to update user role (VULNERABLE TO PRIVILEGE ESCALATION)
 app.post('/update-role', (req, res) => {
-  const { userId, newRole } = req.body;
+  const { userId, newRole } = req.body; // the user can freely pass id = 1 which is the admin
   console.log(userId, newRole);
   // Simulated authentication (insecure)
   const user = users.find(u => u.id === Number(userId));

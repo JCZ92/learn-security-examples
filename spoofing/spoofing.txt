@@ -1,13 +1,13 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
-vulnerability 1: secret key is hardcoded and weak, prone to hijacking attacks.
+vulnerability 1: secret key is hardcoded and weak, prone to hijacking attacks
 countermeasure: pass the secret key by command line parameter
 
 vulnerability 2: httpOnly: false, session cookie can be read by client programs, prone to cross site scripting
 countermeasure: set httpOnly to true, cookie can only be accessed by http requests.
 
-vulnerability 3: CSRF
+vulnerability 3: CSRF: cross site request forgery
 sameSite set as true: mitigate cross-site request forgery attacks by only allowing requests from the same site.
 
 CIA violation:
-Confidentiality: session id may be stolen
+Confidentiality: session id may be stolen, impersonate the true user
 possible Integrity violation: CSRF may be used to corrupt user data

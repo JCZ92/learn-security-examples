@@ -1,2 +1,9 @@
 - Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+Express.js will automatically interpret query parameters as string. While in the insecure version, the value passed by url 
+is directly used as MongoDB qurey, where _id is supposed to a ObjectId type, and this will lead to the crash of MongoDB and the server is down.
+The secure version simply guard this by using a try-catch block to prevent the crash of the server.
+Availbility is compromised in this case.
+
 - What additional security mechanisms can you incorporate to prevent such attacks?
+We can do rate limiting to control the rate of incoming requests or actions performed by users or clients.
+I can expose some sensitive services to only trusted users.

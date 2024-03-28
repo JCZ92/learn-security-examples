@@ -23,7 +23,7 @@ app.get('/userinfo', async (req, res) => {
   const { id } = req.query;
 
   // Vulnerable code: Directly using user-provided values in the query
-  const user = await User.findOne({ _id: id }).exec();
+  const user = await User.findOne({ _id: id }).exec(); // may crash the server, expecting a string, 2929 will crash
 
   if (user) {
     res.send(`User: ${user}`);

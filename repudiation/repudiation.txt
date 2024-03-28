@@ -1,3 +1,8 @@
 - Briefly explain the vulnerability and why the secure version is better at preventing repudiation than the insecure version.
+In the insecure version, we have only a vulnerable log statement, and it has the high risk of repudiation.
+In the secured version, we are using middleware to log user info of the http requests.
+Every sent or received messages, we are logging them to better traceability.
+Besides, for each error, we are also logging them for troubleshooting.
 - What additional security mechanisms can you incorporate to prevent such attacks?
-audit policies, monitor the logs periodically
+We can add audit policies and monitor the logs periodically to find suspicious user
+actions.
